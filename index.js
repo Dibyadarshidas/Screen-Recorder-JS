@@ -2,7 +2,7 @@ const vdo = document.querySelector("video");
 const button = document.querySelector("button");
 const a = document.querySelector("a");
 const start = async ()=>{
-    const stream = await navigator.mediaDevices.getDisplayMedia({
+    const stream = await window.navigator.mediaDevices.getDisplayMedia({
         video:{
             mediaSource : "screen",
         }
@@ -42,3 +42,5 @@ console.log(csv)
 
 const blob = new Blob([csv]);
 a.href = URL.createObjectURL(blob)
+
+console.log("Index.js")
